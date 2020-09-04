@@ -24,10 +24,15 @@ def executePush():
     for index in range(10):
         push(index)
 
+def printAllPushed():
+    print(data_stack)
+
 def printPop():
     print(pop())
     print('\n')
 
 #
 executePush()
+printAllPushed()
+print('\n\n')
 printPop()
