@@ -55,6 +55,7 @@ class NodeManager:
             node = node.next
 
 
+##
 def initialize_node_manager():
     global linked_list_manager
     linked_list_manager = NodeManager(0)

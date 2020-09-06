@@ -35,7 +35,7 @@ initData()
 
 ##### 출력
 print('\n\n')
-print('1.링크드 리스트 간단 구현하기')
+print('링크드 리스트 간단 구현하기')
 printAll()
 
 # 중간에 링크드 리스트 값 넣기
@@ -57,6 +57,6 @@ def insertMiddleNodeInList(data):
 
 ##### 출력
 print('\n\n')
-print('2.간단하게 구현된 링크드 리스트의 중간에 데이터 삽입하기')
+print('간단하게 구현된 링크드 리스트의 중간에 데이터 삽입하기')
 insertMiddleNodeInList(1.5)
 printAll()
