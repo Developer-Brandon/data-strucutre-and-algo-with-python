@@ -2,6 +2,7 @@ hash_table = list([0 for i in range(8)])
 
 print('해쉬테이블 틀 만들기', hash_table)
 
+
 def get_hash_key(key):
     return hash(key)
 
@@ -9,13 +10,16 @@ def get_hash_key(key):
 def hash_func(key):
     return key % 8
 
+
 def select_hash_code_by_key(key):
     return hash_func(get_hash_key(key))
+
 
 def save_value(key, value):
     index_of_key = get_hash_key(key)
     hash_code = hash_func(index_of_key)
-    if hash_table[hash_code] != 0:  # 방어 로직입니다. # 데이터는 [hash_code: [index_of_key, value],hash_code: [index_of_key, value],hash_code: [index_of_key, value],hash_code: [index_of_key, value] .... ] 이런식으로 삽입될 예정입니다.
+    if hash_table[
+        hash_code] != 0:  # 방어 로직입니다. # 데이터는 [hash_code: [index_of_key, value],hash_code: [index_of_key, value],hash_code: [index_of_key, value],hash_code: [index_of_key, value] .... ] 이런식으로 삽입될 예정입니다.
         for index in range(len(hash_table[hash_code])):  # hash table을 순회합니다.
             if hash_table[hash_code][index][0] == index_of_key:  # 만약 index_of_key 값이 동일한 녀석이 있으면
                 hash_table[hash_code][index][1] = value  # value의 자리에 value 값을 넣습니다.
@@ -23,6 +27,7 @@ def save_value(key, value):
         hash_table[hash_code].append([index_of_key, value])  # 만약 키값이 동일한 녀석이 없으면 그대로 다음 row에 삽입하면 됩니다
     else:  # 만약 해당 hash_code로 이루어진 자리가 맨 처음 생성된 hash_table의 데에터라면 그대로 대입해주면 될 것입니다
         hash_table[hash_code] = [[index_of_key, value]]
+
 
 def select_value_by_key(key):
     index_of_key = get_hash_key(key)
