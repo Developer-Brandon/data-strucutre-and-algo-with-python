@@ -1,6 +1,5 @@
 import random
 
-
 def selection_sort(data_list):
     for outerIndex in range(len(data_list) - 1):
         lowestIndex = outerIndex
